@@ -45,9 +45,9 @@ for line in extracted_text.splitlines():
     else:
         attendance[name] = 'absent'
 
-# Display the attendance results
-for name, status in attendance.items():
-    print(f"{name} was {status}")
+# Display the attendance results with index, name and status
+for index, name in attendance_data.items():
+    print(index, name, attendance[name])
 
 # Close any open windows
 cv2.destroyAllWindows()
